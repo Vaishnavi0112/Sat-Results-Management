@@ -19,6 +19,7 @@ public class Main extends javax.swing.JFrame {
     ViewData viewForm = new ViewData();
     GetRank rankForm = new GetRank();
     UpdateScore updateForm = new UpdateScore();
+    DeleteRecord deleteForm = new DeleteRecord();
 
     /**
      * Creates new form NewJFrame
@@ -76,6 +77,11 @@ public class Main extends javax.swing.JFrame {
         });
 
         jButton5.setText("Delete Record");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -140,6 +146,12 @@ public class Main extends javax.swing.JFrame {
         updateForm.setVisible(true);
         updateForm.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        deleteForm.setVisible(true);
+        deleteForm.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments

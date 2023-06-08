@@ -200,6 +200,8 @@ public class InsertData extends javax.swing.JFrame {
 			countryField.setText("");
                         pincodeField.setText("");
                         scoreField.setText("");
+                        
+                        JOptionPane.showMessageDialog(rootPane, "Record inserted Successfully");
                             }  
                         }catch(SQLException e){
 			if(e.getMessage().equals("Duplicate entry '" + name + "' for key 'sat_score.PRIMARY'")){

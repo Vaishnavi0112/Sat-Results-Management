@@ -132,7 +132,6 @@ public class GetRank extends javax.swing.JFrame {
             }
             rankField.setText("Rank: "+rank);
 
-
         }catch(SQLException e){
             System.out.println(e.getMessage());
         }catch(Exception e){
