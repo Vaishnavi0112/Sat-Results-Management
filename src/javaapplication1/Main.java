@@ -17,6 +17,8 @@ public class Main extends javax.swing.JFrame {
     
     InsertData insertForm = new InsertData();
     ViewData viewForm = new ViewData();
+    GetRank rankForm = new GetRank();
+    UpdateScore updateForm = new UpdateScore();
 
     /**
      * Creates new form NewJFrame
@@ -60,8 +62,18 @@ public class Main extends javax.swing.JFrame {
         });
 
         jButton3.setText("Get Rank");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Update Score");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("Delete Record");
 
@@ -116,6 +128,18 @@ public class Main extends javax.swing.JFrame {
         viewForm.setVisible(true);
         viewForm.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        rankForm.setVisible(true);
+        rankForm.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        updateForm.setVisible(true);
+        updateForm.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments

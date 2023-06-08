@@ -34,21 +34,26 @@ public class ViewData extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        ViewButton = new javax.swing.JButton();
+        clearButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         Data = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("VIEW");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ViewButton.setText("VIEW");
+        ViewButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ViewButtonActionPerformed(evt);
             }
         });
 
-        jButton2.setText("CLEAR");
+        clearButton.setText("CLEAR");
+        clearButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearButtonActionPerformed(evt);
+            }
+        });
 
         Data.setColumns(20);
         Data.setRows(5);
@@ -60,9 +65,9 @@ public class ViewData extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(174, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(ViewButton)
                 .addGap(88, 88, 88)
-                .addComponent(jButton2)
+                .addComponent(clearButton)
                 .addGap(158, 158, 158))
             .addGroup(layout.createSequentialGroup()
                 .addGap(62, 62, 62)
@@ -74,8 +79,8 @@ public class ViewData extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(ViewButton)
+                    .addComponent(clearButton))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(55, Short.MAX_VALUE))
@@ -84,7 +89,7 @@ public class ViewData extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ViewButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewButtonActionPerformed
         // TODO add your handling code here:
          try {
                 //Creating a JSONObject object
@@ -114,7 +119,12 @@ public class ViewData extends javax.swing.JFrame {
 //                System.out.println(jsonObject.toJSONString());
              }catch(Exception e){
        }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_ViewButtonActionPerformed
+
+    private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
+        // TODO add your handling code here:
+        Data.setText("");
+    }//GEN-LAST:event_clearButtonActionPerformed
 
     public static ResultSet RetrieveData() throws Exception {
       Connection connectDB = null;
@@ -174,8 +184,8 @@ public class ViewData extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea Data;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton ViewButton;
+    private javax.swing.JButton clearButton;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
